@@ -1,0 +1,617 @@
+.skip_nav{
+    position: fixed;
+    left: 0;
+    top: -100%;
+    z-index: 999;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    background-color: var(--color-white);
+    color: var(--font-color);
+}
+.skip_nav:focus{
+    top: 0;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--header-h);
+    padding: 0 var(--wrapper-margin);
+    display: flex;  /* logo-gnb-util 좌우배치 */
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    fill: var(--color-white);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(0);
+}
+.header.fixed{
+    background-color: var(--color-white);
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+    color: var(--font-color);
+    fill: var(--font-color);
+}
+.header.menu_over,
+.header.fixed.menu_over{
+    background-color: var(--color-white);
+    color: var(--font-color);
+    fill: var(--font-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.header.hide{
+    transform: translateY(-110%);
+}
+.header .logo a{
+    display: block;
+    width: calc(var(--header-h) * 1.66);
+    min-width: 104px;
+    height: calc(var(--header-h) * 0.48);
+    min-height: 31px;
+    margin-bottom: 20px;
+    background: url(../images/common/logo.svg) no-repeat center center / contain;
+}
+.header.fixed .logo a{
+    background-image: url(../images/common/logo_B.svg);
+}
+.header.menu_over .logo a{
+    background-image: url(../images/common/logo_B.svg);
+}
+.header.fixed.menu_over .logo a{
+    background-image: url(../images/common/logo_B.svg);
+}
+@media screen and (min-width:1025px){  /* 1025 이상 - pc */
+            .header .gnb{
+                position: relative;  /* nav_bar 정렬 기준 */
+            }
+            .header .gnb ul.depth1{
+                display: flex; /* li 좌우배치 */
+            }
+            .header .gnb ul.depth1 > li{
+                position: relative; /* 2차메뉴 정렬의 기준 */
+                text-align: center;  /* a한테 주면 가운데 정렬이 li가 좁아졌을 때 적용 안됨 */
+                min-width: 0;
+            }
+            .header .gnb ul.depth1 > li > a{
+                display: block;
+                font-size: var(--font-size-sub4);
+                line-height: var(--header-h);
+                padding: 0 34px;
+                white-space: nowrap;
+            }
+            .header .gnb ul.depth1 > li:hover > a{
+                font-weight: var(--font-weight-B);
+                color: var(--font-color);
+            }
+            .header .gnb ul.depth1 > li > ul.depth2{
+                display: none;
+                position: absolute; /* 1차 메뉴 기준으로 정렬 */
+                left: 50%;
+                transform: translateX(-50%);
+                top: 70px;
+                background-color: var(--background-color-I);
+                color: var(--font-color);
+                padding: 14px 31px;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .header .gnb ul.depth1 > li > ul.depth2 > li > a{
+                display: block;
+                padding: 2px 0;
+                white-space: nowrap;
+            }
+            .header .gnb ul.depth1 > li > ul.depth2 > li > a > span{
+                position: relative; /* after 정렬 기준 */
+            }
+            .header .gnb ul.depth1 > li > ul.depth2 > li > a > span::after{
+                content: "";
+                position: absolute; /* span 기준으로 정렬 */
+                left: 50%;
+                bottom: -1px;
+                transform: translateX(-50%);
+                width: 0;
+                height: 1px;
+                background-color: var(--font-color);
+                transition-property: background-color, width;
+                transition-duration: 0.4s;
+            }
+            .header .gnb ul.depth1 > li > ul.depth2 > li > a:hover > span::after{
+                width: 100%;
+            }
+            .header .gnb .nav_bar{
+                position: absolute; /* gnb를 기준으로 정렬 */
+                left: 0;
+                bottom: 14px;
+                width: 12px;
+                height: 12px;
+                background-color: var(--color-yellow);
+                border-radius: 50%;
+                opacity: 0;
+                transition-property: opacity, left;
+                transition-duration: 0.4s;
+            }
+            .header .gnb:hover .nav_bar{
+                opacity: 1;
+            }
+            .header .util{
+                display: flex;  /* lang-sitemap_btn 좌우 정렬 */
+            }
+            .header .util .lang{
+                position: relative; /* lang_wrap 정렬의 기준 */
+            }
+            .header .util .lang .lang_open{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+            }
+            .header .util .lang .lang_open:hover{
+                fill: var(--font-color);
+            }
+            .header .util .lang .lang_open:hover svg,
+            .header.fixed .util .lang .lang_open:hover svg{
+                width: 22px;
+                height: 22px;
+            }
+            .header .util .lang .lang_wrap{
+                opacity: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 48px;
+                transition-property: opacity;
+                transition-duration: 0.3s;
+            }
+            .header .util .lang.over .lang_wrap{
+                opacity: 1;
+            }
+            .header .util .lang .lang_wrap ul{
+                background-color: var(--background-color-I);
+                color: var(--font-color);
+                border-radius: 5px;
+                box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+                padding: 6px 23px;
+            }
+            .header .util .lang .lang_wrap ul li a{
+                display: block;
+                padding: 4px 0;
+            }
+            .header .util .lang .lang_wrap ul li.active a{
+                font-weight: var(--font-weight-B);
+            }
+            .header .util .lang .lang_wrap ul li a:hover{
+                font-weight: var(--font-weight-B);
+            }
+            /***** sitemap *****/
+            .header .util .sitemap_btn{
+                position: relative;  /* span 정렬 기준 */
+                width: 45px;
+                height: 45px;
+                z-index: 10;  /* 안보이니까 준 값 */
+            }
+            .header .util .sitemap_btn span{
+                position: absolute;
+                left: calc(50% - 10.5px);
+                width: 21px;
+                height: 2px;
+                background-color: var(--color-white);
+                border-radius: 2px;
+            }
+            .header .util .sitemap_btn:hover span{
+                background-color: var(--font-color);
+                height: 3px;
+            }
+            .header.fixed .util .sitemap_btn span,
+            .header.menu_over .util .sitemap_btn span,
+            .header.fixed.menu_over .util .sitemap_btn span{
+                background-color: var(--font-color);
+            }
+            .header.fixed .util .sitemap_btn:hover span{
+                height: 3px;
+            }
+            .header .util .sitemap_btn span.line1{
+                top: 14px;
+                transition-property: transform, top;
+                transition-duration: 0.3s;
+            }
+            .header .util .sitemap_btn span.line2{
+                top: 21px;
+                opacity: 1;
+                transition: opacity 0.3s;
+            }
+            .header .util .sitemap_btn span.line3{
+                top: 28px;
+                transition-property: transform, top;
+                transition-duration: 0.3s;
+            }
+            .header.menu_open .util .sitemap_btn span{
+                background-color: var(--font-color);
+            }
+            .header.menu_open .util .sitemap_btn span.line1{
+                transform: rotate(45deg);
+                top: 50%;
+            }
+            .header.menu_open .util .sitemap_btn span.line2{
+                opacity: 0;
+            }
+            .header.menu_open .util .sitemap_btn span.line3{
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+            .header .sitemap{
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: var(--background-color-I);
+                color: var(--font-color);
+                transform: translateX(110%);  /* 오른쪽에서 나올거임 */
+                transition-property: transform;
+                transition-duration: 0.5s;
+            }
+            .header.menu_open .sitemap{
+                transform: translateX(0);
+            }
+            .header .sitemap .sitemap_wrap{
+                width: var(--wrapper-width);
+                margin: var(--header-h) auto 0 auto;
+                height: calc(100vh - var(--header-h));  /*  나의 영역 안에서만 위아래로 스크롤 되기 위해서 => 디자인 상 위로부터 header_h+50px이 떨어졌으므로 +50px을를 해준거임 */
+                overflow-y: auto;
+                position: relative;  /* sitemap_nav_bar 정렬 기준 */
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li{
+                padding: 30px 0;  /* 글자만 눌릴거니까 여백을 li한테 줌 */
+                margin-left: 38px;  /* wrapper에서부터 떨어지는 왼쪽 여백 */
+                display: flex;  /* 1차메뉴-2차메뉴 좌우 정렬 */
+                align-items: center;  /* 위아래 가운데 정렬 */
+                border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li:last-child{
+                border-bottom: none;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > button{
+                /* display: block; */
+                font-size: var(--font-size-sub1);
+                font-weight: var(--font-weight-B);
+                line-height: var(--line-height-tit);
+                width: 321px;
+                text-align: left;
+                cursor: default;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > button svg{
+                display: none;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2{
+                display: flex;
+                gap: 0 72px;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a{
+                display: block;
+                font-size: var(--font-size-sub3);
+                position: relative;  /* after 정렬 기준 */
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a::after{
+                content: "";
+                position: absolute;  /* a를 기준으로 정렬 */
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--font-color);
+                transition-property: width;
+                transition-duration: 0.4s;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a:hover::after{
+                width: 100%;
+            }
+            .header .sitemap .sitemap_wrap .sitemap_nav_bar{
+                position: absolute;  /* sitemap_wrap을 기준으로 정렬 */
+                left: 0;
+                top: 0;
+                width: 18px;
+                height: 18px;
+                background-color: var(--color-yellow);
+                border-radius: 50%;
+                opacity: 0;
+                transition-property: opacity, top;
+                transition-duration: 0.4s;
+            }
+            .header .sitemap .sitemap_wrap:hover .sitemap_nav_bar{
+                opacity: 1;
+            }
+            .header .sitemap .sitemap_bg{
+                display: none;
+            }
+            
+}/*@media*/
+@media screen and (min-width:1101px) and (max-width:1250px){  /* 1250 ~ 1101 사이 */
+            .header .gnb ul.depth1 > li{
+                min-width: 130px;
+            }
+            .header .gnb ul.depth1 > li > a{
+                padding: 0 20px;
+            }
+}/*@media*/
+@media screen and (min-width:1025px) and (max-width:1100px){  /* 1100 ~ 1025 사이 */
+            .header .gnb ul.depth1 > li{
+                min-width: 95px;
+            }
+            .header .gnb ul.depth1 > li > a{
+                padding: 0 17px;
+            }
+}/*@media*/
+@media screen and (max-width:1024px){  /* 1024 이하 - 모바일 */
+            .header{
+                padding-right: 0;
+            }
+            .header .logo a{
+                margin-bottom: 17px;
+            }
+            .header .gnb{
+                display: none;
+            }
+            .header .util{
+                width: var(--header-h);
+                height: var(--header-h);
+            }
+            .header .util .lang{
+                display: none;
+            }
+            .header .sitemap_btn{
+                position: relative;  /* span 정렬 기준 */
+                z-index: 10;
+                width: var(--header-h);
+                height: var(--header-h);
+            }
+            .header .sitemap_btn span{
+                position: absolute;  /* sitemap_btn 기준으로 정렬 */
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 21px;
+                height: 2px;
+                background-color: var(--color-white);
+                border-radius: 3px;
+                transition: 0.3s;
+            }
+            .header.fixed .sitemap_btn span{
+                background-color: var(--font-color);
+            }
+            .header.menu_open .sitemap_btn span{
+                background-color: var(--font-color);
+            }
+            .header .sitemap_btn span.line1{
+                top: calc(50% - 6px);  /* 마이너스값을 줘야 가운데에서 위로 올라감 */
+                transition-property: top, transform;
+                transition-duration: 0.3s;
+            }
+            .header .sitemap_btn span.line2{
+                opacity: 1;
+                transition-property: opacity;
+            }
+            .header .sitemap_btn span.line3{
+                top: calc(50% + 6px);  /* +값을 줘야 아래로 내려감 */
+                transition-property: top, transform;
+                transition-duration: 0.3s;
+            }
+            .header.menu_open .sitemap_btn span.line1{
+                top: 50%;  /* 다시 위아래 가운데 위치 */
+                transform: translate(-50%, -50%) rotate(45deg);
+    /* translate 주는 이유는 rotate가 들어가면서 위에서 준 translate가 취소되기 때문에 한 번 더 같은 값을 줌으로써 span을 가운데에 위치시킴 */
+            }
+            .header.menu_open .sitemap_btn span.line2{
+                opacity: 0;
+            }
+            .header.menu_open .sitemap_btn span.line3{
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            .header .sitemap{
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                transform: translateX(110%);
+            }
+            .header.menu_open .sitemap{
+                transform: translateX(0);
+            }
+            .header .sitemap .sitemap_wrap{
+                position: fixed;  /* sitemap_nav_bar 정렬 기준도 됨 */
+                right: 0;
+                top: 0;
+                z-index: 10;
+                width: 80%;
+                max-width: 500px;
+                height: 100vh;
+                background-color: var(--background-color-I);
+                color: var(--font-color);
+                padding-top: var(--header-h);  /* margin으로 주면 안보임 paddign으로 줘야 됨!! */
+                transform: translateX(110%);
+                transition-property: transform;
+                transition-duration: 0.3s;
+            }
+            .header.menu_open .sitemap .sitemap_wrap{
+                transform: translateX(0);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1{
+                padding: 24px 0 0 36px;
+                height: calc(100vh - var(--header-h));
+                overflow-y: auto;
+                background-color: var(--background-color-I);
+                border-top: 1px solid rgba(204, 204, 204, 0.3);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > button{
+                padding: 20px 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                fill: var(--font-color);
+                position: relative;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > button > span{
+                font-size: var(--font-size-sub3);
+                font-weight: var(--font-weight-B);
+                line-height: var(--line-height-tit);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > button > svg{
+                position: absolute;
+                right: 35px;
+                top: 0;
+                height: 100%;
+                transition: transform 0.4s;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li.open > button > svg{
+                transform: rotate(180deg);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2{
+                display: none;
+                margin: 10px var(--wrapper-margin) 0 0;
+                padding: 12px 0;
+                background-color: var(--color-white);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li{
+                padding: 4px 0;
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a{
+                display: block;
+                padding-left: var(--wrapper-margin);  /* 왼쪽 여백도 눌리기 위해 a한테 줌 */
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a > span{
+                position: relative;  /* after 정렬 기준 */
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a > span::after{
+                content: "";
+                position: absolute;  /* span 기준으로 정렬 */
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 1px;
+                background-color: var(--font-color);
+            }
+            .header .sitemap .sitemap_wrap ul.depth1 > li > ul.depth2 > li > a:hover > span::after{
+                width: 100%;
+            }
+            .header .sitemap .sitemap_wrap .sitemap_nav_bar{
+                position: absolute;  /* sitemap_wrap 기준으로 정렬 */
+                left: 16px;
+                top: 0;
+                width: 12px;
+                height: 12px;
+                background-color: var(--color-yellow);
+                border-radius: 50%;
+                opacity: 0;
+                transition-property: top, opacity;
+                transition-duration: 0.4s;
+            }
+            .header .sitemap .sitemap_wrap:hover .sitemap_nav_bar{
+                opacity: 1;
+            }
+            .header .sitemap .sitemap_bg{
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0);
+                backdrop-filter: blur(0);
+                transform: translateX(110%);
+                transition-property: background-color, backdrop-filter ;
+                transition-duration: 0.3s;
+            }
+            .header.menu_open .sitemap .sitemap_bg{
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(4px);
+                transform: translateX(0);
+            }
+}/*@media*/
+@media screen and (max-width:768px){
+            .header .sitemap .sitemap_wrap ul.depth1 > li > button > svg{
+                right: 20px;
+            }
+}/*@media*/
+
+
+
+.container{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 300px;
+    background-color: var(--color-white);
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: clamp(17px, 2.4vw, 24px) 0;
+}
+.footer .footer_head{
+    padding-bottom: clamp(20px, 3vw, 30px);
+    border-bottom: 1px solid rgba(29, 29, 29, 0.5);
+}
+.footer .footer_head .photo{
+    width: clamp(105px, 15vw, 165px);
+}
+.footer .footer_body{
+    padding-top: var(--gap);
+}
+.footer .footer_body .f_nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 50px;
+}
+.footer .footer_body .f_nav ul li{
+    position: relative; /* after 정렬 기준 */
+}
+.footer .footer_body .f_nav ul li.imp{
+    font-weight: var(--font-weight-B);
+}
+.footer .footer_body .f_nav ul li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--font-color);
+    transition-property: width;
+    transition-duration: 0.3s;
+}
+.footer .footer_body .f_nav ul li:hover::after{
+    width: 100%;
+}
+.footer .footer_body .f_nav ul li a{
+    display: block;
+    position: relative;  /* before 정렬 기준 */
+}
+.footer .footer_body .f_nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: var(--color-gray);
+}
+.footer .footer_body .f_nav ul li:first-child a::before{
+    display: none;
+}
+.footer .footer_body .f_info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 46px;
+    margin: clamp(20px, 2.4vw, 24px) 0;
+}

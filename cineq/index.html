@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>씨네Q</title>
+</head>
+    <a href="#skip_contents" class="skip_nav">본문 바로가기</a>
+    <div id="wrap">
+        <header class="header_wrap">
+            <div class="header_banner">
+                <div class="inner">
+                    <div class="wrapper">
+                        <div class="lang_wrap">
+                            <button><span>한국어</span></button>
+                            <ul class="lang_list">
+                                <li class="En"><a href="#n"><span>English</span></a></li>
+                                <li class="Jp"><a href="#n"><span>日本語</span></a></li>
+                                <li class="Cn"><a href="#n"><span>中文</span></a></li>
+                            </ul>
+                        </div><!--//lang_wrap-->
+                        <div class="header_action">
+                            <ul>
+                                <li><a href="#n"><span>로그인</span></a></li>
+                                <li><a href="#n"><span>예매확인/취소</span></a></li>
+                                <li><a href="#n"><span>회원가입</span></a></li>
+                                <li><a href="#n"><span>고객센터</span></a></li>
+                            </ul>
+                        </div><!--//header_action-->
+                    </div><!--//wrapper-->
+                </div><!--//inner-->
+            </div><!--//header_banner-->
+            <div class="header">
+                <div class="header_mid">
+                    <div class="wrapper">
+                        <h1 class="logo"><a href="index.html"><span class="sr-only">CINEQ</span></a></h1>
+                    </div>
+                </div><!--//header_mid-->
+                <div class="header_bot">
+                    <div class="wrapper">
+                        <nav class="gnb">
+                            <ul class="depth1">
+                                <li>
+                                    <a href="#n"><span>영화</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>박스오피스</span></a></li>
+                                        <li><a href="#n"><span>현재상영작</span></a></li>
+                                        <li><a href="#n"><span>상영예정작</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>예매</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>빠른 예매</span></a></li>
+                                        <li><a href="#n"><span>비회원 예매</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>극장</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>전체극장</span></a></li>
+                                        <li><a href="#n"><span>특별관</span></a></li>
+                                        <li><a href="#n"><span>작은영화관</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>이벤트</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>전체이벤트</span></a></li>
+                                        <li><a href="#n"><span>진행 중 이벤트</span></a></li>
+                                        <li><a href="#n"><span>당첨자 발표</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>혜택</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>씨네큐멤버십</span></a></li>
+                                        <li><a href="#n"><span>제휴/할인</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="depth2_bg">
+                                <div class="img_box">
+                                    <span>예매율순</span>
+                                    <div class="photo_wrap">
+                                        <div class="photo"><img src="images/common/img_box1.jpg" alt="왕과 사는 남자 영화 포스터"></div>
+                                        <div class="photo"><img src="images/common/img_box2.jpg" alt="끝장수사 영화 포스터"></div>
+                                        <div class="photo"><img src="images/common/img_box3.jpg" alt="귀멸의 칼날 영화 포스터"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="search_wrap">
+                            <form>
+                                <fieldset>
+                                    <legend>키워드 검색</legend>
+                                    <div class="search">
+                                        <label for="keyword"></label>
+                                        <input type="text" id="keyword" placeholder="영화를 검색하세요." class="keyword">
+                                        <input type="submit" value="" title="영화검색" class="search_btn">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div><!--//wrapper-->
+                </div><!--//header_bot-->
+                <div class="mo_gnb">
+                    <div class="mo_header">
+                        <div class="mo_logo"><a href="index.html"><span class="sr-only">CINEQ</span></a></div>
+                        <button class="gnb_open">
+                            <span class="sr-only">메뉴 열기</span>
+                            <svg width="28" height="22" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 3.14286V0H28V3.14286H0ZM0 22V18.8571H28V22H0ZM0 12.5714V9.42857H28V12.5714H0Z"/>
+                            </svg>
+                        </button>
+                    </div><!--//mo_header-->
+                </div><!--//mo_gnb-->
+            </div><!--//header-->
+            <div class="site_map">
+                <div class="gnb_wrap">
+                    <div class="gnb_box">
+                        <div class="gnb_logo"><div class="photo"><img src="images/common/logo.svg" alt="씨네큐 로고"></div></div>
+                        <div class="gnb">
+                            <ul class="depth1">
+                                <li>
+                                    <button><span>영화</span></button>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>박스오피스</span></a></li>
+                                        <li><a href="#n"><span>현재상영작</span></a></li>
+                                        <li><a href="#n"><span>상영예정작</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button><span>예매</span></button>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>빠른 예매</span></a></li>
+                                        <li><a href="#n"><span>비회원 예매</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button><span>극장</span></button>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>전체극장</span></a></li>
+                                        <li><a href="#n"><span>특별관</span></a></li>
+                                        <li><a href="#n"><span>작은영화관</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button><span>이벤트</span></button>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>전체이벤트</span></a></li>
+                                        <li><a href="#n"><span>진행 중 이벤트</span></a></li>
+                                        <li><a href="#n"><span>당첨자 발표</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button><span>혜택</span></button>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>씨네큐멤버십</span></a></li>
+                                        <li><a href="#n"><span>제휴/할인</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="btn"><a href="#n"><span>빠른 예매</span></a></div>
+                        </div>
+                        <button class="gnb_close">
+                            <span class="sr-only">메뉴 닫기</span>
+                            <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.2 22L0 19.8L8.8 11L0 2.2L2.2 0L11 8.8L19.8 0L22 2.2L13.2 11L22 19.8L19.8 22L11 13.2L2.2 22Z"/>
+                            </svg>
+                        </button>
+                    </div><!--//gnb_box-->
+                </div><!--//gnb_wrap-->
+                <div class="gnb_bg"></div>
+            </div><!--//site_map-->
+        </header>
+        <main class="container">
+            <section class="visual" id="skip_contents">
+                <h2 class="sr-only">visual</h2>
+                <div class="swiper_pc"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="귀멸의 칼날 영화 예고편">
+                                <source src="images/main/video2.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="메소드연기 영화 예고편">
+                                <source src="images/main/video5.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="프로젝트 헤일메리 영화 예고편">
+                                <source src="images/main/video3.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="호퍼스 영화 예고편">
+                                <source src="images/main/video4.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="왕과 사는 남자 영화 예고편">
+                                <source src="images/main/video1.mp4">
+                            </video>
+                        </li>
+                    </ul>
+                    <div class="paging"></div>
+                </div>
+                <div class="swiper_mo">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="휴민트 영화 예고편">
+                                <source src="images/main/mo_visual01.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="메소드연기 영화 예고편">
+                                <source src="images/main/mo_visual02.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="프로젝트 헤일메리 영화 예고편">
+                                <source src="images/main/mo_visual03.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="군체 영화 예고편">
+                                <source src="images/main/mo_visual04.mp4">
+                            </video>
+                        </li>
+                        <li class="swiper-slide">
+                            <video preload autoplay loop muted playsinline aria-label="왕과 사는 남자 영화 예고편">
+                                <source src="images/main/mo_visual05.mp4">
+                            </video>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap">
+                        <button class="prev">
+                            <span class="sr-only">이전 팝업 버튼</span>
+                            <svg width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.1911 1.74921e-06L12 1.775L3.61783 10L12 18.225L10.1911 20L-1.03312e-06 10L10.1911 1.74921e-06Z"/>
+                            </svg>
+                        </button>
+                        <button class="next">
+                            <span class="sr-only">다음 팝업 버튼</span>
+                            <svg width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.80892 20L0 18.225L8.38216 10L0 1.775L1.80892 0L12 10L1.80892 20Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div><!--//swiper_mo-->
+            </section>
+            <section class="Box_Office">
+                <h2>Box Office</h2>
+                <div class="list">
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice01.jpg" alt="메소드 영화 포스터"></div>
+                                    <div class="txt"><h3>메소드</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice02.jpg" alt="프로텍터 영화 포스터"></div>
+                                    <div class="txt"><h3>프로텍터</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice03.jpg" alt="호퍼스 영화 포스터"></div>
+                                    <div class="txt"><h3>호퍼스</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice04.jpg" alt="귀멸의 칼날 영화 포스터"></div>
+                                    <div class="txt"><h3>귀멸의 칼날</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice05.jpg" alt="왕과 사는 남자 영화 포스터"></div>
+                                    <div class="txt"><h3>왕과 사는 남자</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice06.jpg" alt="휴민트 영화 포스터"></div>
+                                    <div class="txt"><h3>휴민트</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice07.jpg" alt="진격의 거인 영화 포스터"></div>
+                                    <div class="txt"><h3>진격의 거인</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice08.jpg" alt="살목지 영화 포스터"></div>
+                                    <div class="txt"><h3>살목지</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice09.jpg" alt="명탐정 코난 영화 포스터"></div>
+                                    <div class="txt"><h3>명탐정 코난</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice10.jpg" alt="프로젝트 헤일메리 영화 포스터"></div>
+                                    <div class="txt"><h3>프로젝트 헤일메리</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice01.jpg" alt="메소드 영화 포스터"></div>
+                                    <div class="txt"><h3>메소드</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice02.jpg" alt="프로텍터 영화 포스터"></div>
+                                    <div class="txt"><h3>프로텍터</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice03.jpg" alt="호퍼스 영화 포스터"></div>
+                                    <div class="txt"><h3>호퍼스</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice04.jpg" alt="귀멸의 칼날 영화 포스터"></div>
+                                    <div class="txt"><h3>귀멸의 칼날</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice05.jpg" alt="왕과 사는 남자 영화 포스터"></div>
+                                    <div class="txt"><h3>왕과 사는 남자</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice06.jpg" alt="휴민트 영화 포스터"></div>
+                                    <div class="txt"><h3>휴민트</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice07.jpg" alt="진격의 거인 영화 포스터"></div>
+                                    <div class="txt"><h3>진격의 거인</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice08.jpg" alt="살목지 영화 포스터"></div>
+                                    <div class="txt"><h3>살목지</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice09.jpg" alt="명탐정 코난 영화 포스터"></div>
+                                    <div class="txt"><h3>명탐정 코난</h3></div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="movie_box">
+                                    <div class="photo"><img src="images/main/BoxOffice10.jpg" alt="프로젝트 헤일메리 영화 포스터"></div>
+                                    <div class="txt"><h3>프로젝트 헤일메리</h3></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="biz">
+                <h2 class="sr-only">극장 소개</h2>
+                <div class="wrapper">
+                    <div class="tab_list">
+                        <ul role="tablist">
+                            <li id="biz_tab01" role="tab" aria-selected="true" aria-controls="biz_conts01" class="suite active">
+                                <button>
+                                    <div class="photo"><img src="images/main/biz_min01.jpg" alt="스위트 영화관 사진"></div>
+                                    <em class="sr-only">선택됨</em>
+                                </button>
+                            </li>
+                            <li id="biz_tab02" role="tab" aria-selected="false" aria-controls="biz_conts02" class="reserve">
+                                <button>
+                                    <div class="photo"><img src="images/main/biz_min02.jpg" alt="리저브 영화관 사진"></div><em class="sr-only"></em>
+                                </button>
+                            </li>
+                            <li id="biz_tab03" role="tab" aria-selected="false" aria-controls="biz_conts03" class="recliner">
+                                <button>
+                                    <div class="photo"><img src="images/main/biz_min03.jpg" alt="리클라이너 영화관 사진"></div><em class="sr-only"></em>
+                                </button>
+                            </li>
+                            <li id="biz_tab04" role="tab" aria-selected="false" aria-controls="biz_conts04" class="small">
+                                <button>
+                                    <div class="photo"><img src="images/main/biz_min04.jpg" alt="작은 영화관 사진"></div><em class="sr-only"></em>
+                                </button>
+                            </li>
+                        </ul>
+                    </div><!--//tab_list-->
+                    <div class="tab_conts">
+                        <div id="biz_conts01" role="tabpanel" aria-labelledby="biz_tab01" class="tab_item suite active">
+                            <div class="tab_wrap">
+                                <div class="photo"><img src="images/main/biz01.jpg" alt="스위트 영화관 사진"></div>
+                                <div class="text_wrap">
+                                    <h3>스위트</h3>
+                                    <p>전 좌석 리클라이너와 넓은 간격으로 구성된 프라이빗 상영관으로, 소수 인원만 이용 가능해 조용하고 몰입도 높은 관람이 가능하다. 전용 라운지까지 제공되는 프리미엄 공간으로, 최신 음향 시스템과 고화질 스크린을 통해 한층 더 생생한 영화 경험을 제공한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="biz_conts02" role="tabpanel" aria-labelledby="biz_tab02" class="tab_item reserve">
+                            <div class="tab_wrap">
+                                <div class="photo"><img src="images/main/biz02.jpg" alt="리저브 영화관 사진"></div>
+                                <div class="text_wrap">
+                                    <h3>리저브</h3>
+                                    <p>전 좌석 리클라이너와 개인 칸막이가 적용된 프리미엄 상영관으로, 넓은 좌석 간격과 편안한 자세 조절이 가능해 영화에 집중하기 최적화된 몰입형 관람 환경을 제공하며, 주변 소음을 최소화한 설계로 개인만의 영화 감상에 더욱 집중할 수 있는 환경을 완성했다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="biz_conts03" role="tabpanel" aria-labelledby="biz_tab03" class="tab_item recliner">
+                            <div class="tab_wrap">
+                                <div class="photo"><img src="images/main/biz03.jpg" alt="리클라이너 영화관 사진"></div>
+                                <div class="text_wrap">
+                                    <h3>리클라이너</h3>
+                                    <p>전 좌석 리클라이너와 양팔걸이 구조로 넓고 쾌적한 환경을 제공하며, 편안한 자세와 여유로운 간격으로 몰입감 있는 관람이 가능하고, 장시간 관람에도 피로감을 줄여주는 설계로 더욱 여유로운 영화 관람을 지원한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="biz_conts04" role="tabpanel" aria-labelledby="biz_tab04" class="tab_item small">
+                            <div class="tab_wrap">
+                                <div class="photo"><img src="images/main/biz04.jpg" alt="작은 영화관 사진"></div>
+                                <div class="text_wrap">
+                                    <h3>작은 영화관</h3>
+                                    <p>지역 기반 문화공간으로 운영되는 소규모 영화관으로, 접근성이 낮은 지역에서도 다양한 영화를 즐길 수 있도록 제공되며 지역 커뮤니티와 연계된 문화 플랫폼 역할을 하고, 지역 주민 참여 프로그램과 다양한 문화 이벤트를 통해 소통과 교류의 장을 마련한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo_list">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="txt">
+                                        <h3>스위트</h3>
+                                        <p>리클라이너 프라이빗 상영관으로, 소수 관람과 몰입감 높은 영화 경험을 제공</p>
+                                    </div>
+                                    <div class="photo"><img src="images/main/biz_mo01.jpg" alt="스위트 영화관"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="txt">
+                                        <h3>리저브</h3>
+                                        <p>리클라이너와 칸막이 상영관으로, 소음을 줄이고 몰입형 관람 환경을 제공</p>
+                                    </div>
+                                    <div class="photo"><img src="images/main/biz_mo02.jpg" alt="리저브 영화관"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="txt">
+                                        <h3>리클라이너</h3>
+                                        <p>리클라이너와 양팔걸이 구조로, 편안하고 쾌적한 관람 환경을 제공</p>
+                                    </div>
+                                    <div class="photo"><img src="images/main/biz_mo03.jpg" alt="리클라이너 영화관"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="txt">
+                                        <h3>작은 영화관</h3>
+                                        <p>지역 기반 소규모 영화관으로, 다양한 영화와 커뮤니티 프로그램을 운영</p>
+                                    </div>
+                                    <div class="photo"><img src="images/main/biz_mo04.jpg" alt="작은 영화관"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--//wrapper-->
+                <div class="line1"><span>CINEMA IS LIFE</span></div>
+                <div class="line2"><span>AT CINE Q</span></div>
+            </section>
+            <section class="movie">
+                <h2 class="sr-only">영화 예매</h2>
+                <div class="wrapper">
+                    <div class="tab_list">
+                        <div class="list">
+                            <div class="swiper">
+                                <ul role="tablist" class="swiper-wrapper">
+                                    <li id="movie_tab01" role="tab" aria-selected="true" aria-controls="movie_conts01" class="list01 active swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list01.jpg" alt="휴민트 영화 포스터"></div><em class="sr-only">선택됨</em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab02" role="tab" aria-selected="false" aria-controls="movie_conts02" class="list02 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list02.jpg" alt="호퍼스 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab03" role="tab" aria-selected="false" aria-controls="movie_conts03" class="list03 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list03.jpg" alt="프로텍터 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab04" role="tab" aria-selected="false" aria-controls="movie_conts04" class="list04 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list04.jpg" alt="진격의 거인 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab05" role="tab" aria-selected="false" aria-controls="movie_conts05" class="list05 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list05.jpg" alt="메소드연기 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab06" role="tab" aria-selected="false" aria-controls="movie_conts06" class="list06 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list06.jpg" alt="귀멸의 칼날 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab07" role="tab" aria-selected="false" aria-controls="movie_conts07" class="list07 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list07.jpg" alt="명탐정 코난 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                    <li id="movie_tab08" role="tab" aria-selected="false" aria-controls="movie_conts08" class="list08 swiper-slide">
+                                        <button>
+                                            <div class="photo"><img src="images/main/mov_list08.jpg" alt="왕과 사는 남자 영화 포스터"></div><em class="sr-only"></em>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div><!--//swiper-->
+                            <button class="prev">
+                                <span class="sr-only">이전 팝업 보기</span>
+                                <svg width="15" height="25" viewBox="0 0 15 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7389 -1.97676e-07L15 2.21875L4.52229 12.5L15 22.7812L12.7389 25L1.09278e-06 12.5L12.7389 -1.97676e-07Z"/>
+                                </svg>
+                            </button>
+                            <button class="next">
+                                <span class="sr-only">다음 팝업 보기</span>
+                                <svg width="15" height="25" viewBox="0 0 15 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.26114 25L-3.9832e-06 22.7812L10.4777 12.5L-3.87939e-07 2.21875L2.26115 3.95351e-07L15 12.5L2.26114 25Z"/>
+                                </svg>
+                            </button>
+                        </div><!--//list-->
+                    </div><!--//tab_list-->
+                    <div class="tab_conts">
+                        <div id="movie_conts01" role="tabpanel" aria-labelledby="movie_tab01" class="tab_item list01 active">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts01.jpg" alt="휴민트 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>휴민트</h3>
+                                        <span class="fifteen">15</span>
+                                    </div>
+                                    <p>동남아에서 벌어진 국제 범죄를 추적하던 국정원 블랙 요원, 조 과장(조인성)은 자신의 휴민트 작전에서 희생된 정보원이 남긴 단서를 쫓아 블라디보스토크로 향한다. 그곳에서 북한 식당 종업원 채선화(신세경)와 접촉한 조 과장은 새로운 휴민트 작전의 정보원으로 그녀를 선택한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts02" role="tabpanel" aria-labelledby="movie_tab02" class="tab_item list02">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts02.jpg" alt="호퍼스 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>호퍼스</h3>
+                                        <span class="all">ALL</span>
+                                    </div>
+                                    <p>"비버 모드 ON! 좋아, 자연스러웠어!" 동물과 자연을 사랑하는 소녀 '메이블'은 할머니와의 소중한 추억이 깃든 연못이 사라질 위기에 놓이자, 이를 지키기 위한 방법을 찾기 위해 고군분투한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts03" role="tabpanel" aria-labelledby="movie_tab03" class="tab_item list03">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts03.jpg" alt="프로텍터 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>프로텍터</h3>
+                                        <span class="fifteen">15</span>
+                                    </div>
+                                    <p>전쟁 영웅으로 추앙 받으며 조용한 일상을 살아가던 '니키'. 그러나 어느 날, 딸 '클로이'가 정체불명의 범죄 집단에 납치되면서 그녀의 삶은 순식간에 무너진다. 주어진 시간은 단 72시간.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts04" role="tabpanel" aria-labelledby="movie_tab04" class="tab_item list04">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts04.jpg" alt="진격의 거인 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3 class="long">극장판 진격의 거인 완결편 더 라스트 어택</h3>
+                                        <span class="fifteen">15</span>
+                                    </div>
+                                    <p>거인의 위협으로부터 몸을 지키기 위해 거대한 벽을 쌓고 그 안에서 숨을 죽이고 살고 있는 인류. 백 년의 평화는 초대형 거인의 습격으로 파괴됐고,어머니를 잃은 소년 엘렌 예거는 모든 거인을 없앨 것을 맹세하고 거인과 싸우는 조사병단의 일원이 되었다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts05" role="tabpanel" aria-labelledby="movie_tab05" class="tab_item list05">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts05.jpg" alt="메소드연기 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>메소드연기</h3>
+                                        <span class="twelve">12</span>
+                                    </div>
+                                    <p>천만 배우, 패셔니스타, 멀티테이너, 그리고 코미디 배우. 코미디 ‘알계인’으로 뜨고 ‘알계인’으로 기억되는 배우 ‘이동휘’. 더 이상 ‘웃기는 연기’가 하기 싫은 그는 모든 활동을 중단한 채 연기 변신의 기회만을 기다린다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts06" role="tabpanel" aria-labelledby="movie_tab06" class="tab_item list06">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts06.jpg" alt="귀멸의 칼날 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>극장판 귀멸의 칼날: 무한성편</h3>
+                                        <span class="fifteen">15</span>
+                                    </div>
+                                    <p>혈귀로 변해버린 여동생 네즈코를 인간으로 되돌리기 위해 혈귀를 사냥하는 조직인 《귀살대》에 입대한 카마도 탄지로. 입대 후 동료인 아가츠마 젠이츠, 하시비라 이노스케와 함께 많은 혈귀와 싸우고, 성장하면서 세 사람의 우정과 유대는 깊어진다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts07" role="tabpanel" aria-labelledby="movie_tab07" class="tab_item list07">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts07.jpg" alt="명탐정 코난 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>명탐정 코난: 세기말의 마술사</h3>
+                                        <span class="twelve">12</span>
+                                    </div>
+                                    <p>“메모리즈 에그를 가지러 가겠다” - 세기말의 마술사, 괴도 키드! 러시아 로마노프 왕조의 유산인 파베르제의 달걀 중 세기말 최후의 보물 ‘메모리즈 에그’가 발견되고, 이를 노리는 괴도 키드의 예고장이 도착한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movie_conts08" role="tabpanel" aria-labelledby="movie_tab08" class="tab_item list08">
+                            <div class="movie_wrap">
+                                <div class="movie_left">
+                                    <div class="photo"><img src="images/main/mov_conts08.jpg" alt="왕과 사는 남자 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="info">
+                                            <span>상세정보</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-5.07052e-07 11.6L9.6 2L1 2L1 -5.24537e-07L13 0L13 12L11 12L11 3.4L1.4 13L-5.07052e-07 11.6Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="movie_right">
+                                    <div class="tit">
+                                        <h3>왕과 사는 남자</h3>
+                                        <span class="twelve">12</span>
+                                    </div>
+                                    <p>“나는 이제 어디로 갑니까…” 계유정난이 조선을 뒤흔들고 어린 왕 이홍위는 왕위에서 쫓겨나 유배길에 오른다. “무슨 수를 쓰더라도 그 대감을 우리 광천골로 오게 해야지” 한편, 강원도 영월 산골 마을 광천골의 촌장 엄흥도는 먹고 살기 힘든 마을 사람들을 위해 청령포를 유배지로 만들기 위해 노력한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more"><a href="#n"><span>영화 더보기</span></a></div>
+                    </div><!--//tab_conts-->
+                    <div class="mo_list">
+                        <div class="mo_swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>휴민트</h3>
+                                            <span class="fifteen">15</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts01.jpg" alt="휴민트 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>호퍼스</h3>
+                                            <span class="all">ALL</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts02.jpg" alt="호퍼스 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>프로텍터</h3>
+                                            <span class="fifteen">15</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts03.jpg" alt="프로텍터 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>진격의 거인</h3>
+                                            <span class="fifteen">15</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts04.jpg" alt="진격의 거인 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>메소드</h3>
+                                            <span class="twelve">12</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts05.jpg" alt="메소드 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>귀멸의 칼날</h3>
+                                            <span class="fifteen">15</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts06.jpg" alt="귀멸의 칼날 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>명탐정 코난</h3>
+                                            <span class="twelve">12</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts07.jpg" alt="명탐정 코난 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="tit">
+                                        <div class="sub_tit">
+                                            <h3>왕과 사는 남자</h3>
+                                            <span class="twelve">12</span>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/main/mo_mov_conts08.jpg" alt="왕과 사는 남자 영화 포스터"></div>
+                                    <div class="btn_wrap">
+                                        <a href="#n" class="mo_info">
+                                            <span>상세정보</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#n">
+                                            <span>예매하기</span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M-3.9004e-07 8.92308L7.38462 1.53846L0.769231 1.53846L0.769231 -4.0349e-07L10 0L10 9.23077L8.46154 9.23077L8.46154 2.61538L1.07692 10L-3.9004e-07 8.92308Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div><!--//wrapper-->
+            </section>
+            <section class="event">
+                <div class="wrapper">
+                    <h2>이벤트</h2>
+                    <div class="sub_tit">
+                        <h3 class="first"><button><span>스페셜 티켓</span></button></h3>
+                        <h3><button><span>진행중 이벤트</span></button></h3>
+                        <h3><button><span>씨네큐 CLUB</span></button></h3>
+                    </div>
+                    <div class="inner">
+                        <div class="event_left">
+                            <div class="ticket">
+                                <div class="ticket_left">
+                                    <strong>씨네큐 스페셜 티켓</strong>
+                                    <h3>SPECIAL<br>TICKET</h3>
+                                    <span>씨네큐만의<br>내 손안에 간직하는 영화 기억법</span>
+                                </div>
+                                <div class="ticket_right">
+                                    <div class="list">
+                                        <div class="ticket swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide">
+                                                    <div class="photo"><img src="images/main/ticket_1024_01.jpg" alt="스페셜 티켓"></div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="photo"><img src="images/main/ticket_1024_02.jpg" alt="스페셜 티켓"></div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="photo"><img src="images/main/ticket_1024_03.jpg" alt="스페셜 티켓"></div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="photo"><img src="images/main/ticket_1024_04.jpg" alt="스페셜 티켓"></div>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <div class="photo"><img src="images/main/ticket_1024_05.jpg" alt="스페셜 티켓"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn_wrap">
+                                            <div class="bar"><span></span></div><!--//bar-->
+                                            <button class="prev">
+                                                <span class="sr-only">이전 팝업 보기</span>
+                                                <svg width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.49981 8.35069e-07L8.83106 1.33125L2.66231 7.5L8.83105 13.6688L7.4998 15L-0.00019486 7.5L7.49981 8.35069e-07Z"/>
+                                                </svg>
+                                            </button>
+                                            <button class="next">
+                                                <span class="sr-only">다음 팝업 보기</span>
+                                                <svg width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.33125 15L0 13.6687L6.16875 7.5L0 1.33125L1.33125 0L8.83125 7.5L1.33125 15Z"/>
+                                                </svg>
+                                            </button>
+                                            <button class="stop">
+                                                <span class="sr-only">일시정지</span>
+                                                <svg width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 14V0H12V14H8ZM0 14V0H4V14H0Z"/>
+                                                </svg>
+                                            </button>
+                                            <button class="play">
+                                                <span class="sr-only">다시재생</span>
+                                                <svg width="11" height="14" viewBox="0 0 11 14" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 14V0L11 7L0 14Z"/>
+                                                </svg>
+                                            </button>
+                                            <div class="paging"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="q-club"><div class="photo"><img src="images/main/Q-club.jpg" alt="씨네큐 클럽 혜택"></div></div>
+                                <div class="vip"><div class="photo"><img src="images/main/VIP.jpg" alt="씨네큐 vip 혜택"></div></div>
+                            </div>
+                        </div>
+                        <div class="event_right">
+                            <div class="list">
+                                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <div class="photo"><img src="images/main/event_right01.jpg" alt="이벤트 정보"></div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="photo"><img src="images/main/event_right02.jpg" alt="이벤트 정보"></div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="photo"><img src="images/main/event_right03.jpg" alt="이벤트 정보"></div>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <div class="photo"><img src="images/main/event_right04.jpg" alt="이벤트 정보"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rolling_wrap">
+                    <div class="rolling">
+                        <p>CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q     CINE Q</p>
+                    </div>
+                </div>
+                <div class="event_bg">
+                    <div class="photo circle01"><img src="images/main/Circle01.png" alt="원"></div>
+                    <div class="photo circle02"><img src="images/main/Circle02.png" alt="원"></div>
+                    <div class="photo circle03"><img src="images/main/Circle03.png" alt="원"></div>
+                    <div class="photo red"><img src="images/main/red_Circle.png" alt="빨간 반원"></div>
+                </div>
+            </section>
+            <section class="page">
+                <h2 class="sr-only">page</h2>
+                <div class="word">
+                    <div class="line01 text">C</div>
+                    <div class="line02 text">CI</div>
+                    <div class="line03 text">CIN</div>
+                    <div class="line04 text">CINE</div>
+                    <div class="line05 text"><span>CINE<img src="images/main/Q.svg" alt="Q"></span></div>
+                    <div class="line06 text"><img src="images/main/Q_last.svg" alt="Q"></div>
+                    <div class="line07 text"><img src="images/main/Q_last.svg" alt="Q"></div>
+                </div>
+            </section>
+            <button class="top"><span class="sr-only">Top</span></button>
+        </main>
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="wrapper">
+                    <span>일상 속 영화의 가치를 확장<br>하는 시네마 브랜드 씨네큐</span>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="footer_mid">
+                    <div class="foot_left">
+                        <span class="email">메일 : cineq@its-new.co.kr</span>
+                        <span class="call">고객센터: 1544-1533</span>
+                        <address>서울특별시 강남구 학동로 9길 5
+                            <span>대표이사: 유제천</span>
+                        </address>
+                    </div>
+                    <div class="foot_right">
+                        <div class="foot_nav">
+                            <ul>
+                                <li>
+                                    <a href="#n"><span>회사소개</span></a>
+                                    <ul class="footer_depth2">
+                                        <li><a href="#n"><span>회사개요</span></a></li>
+                                        <li><a href="#n"><span>IR</span></a></li>
+                                        <li><a href="#n"><span>제휴문의</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>고객지원</span></a>
+                                    <ul class="footer_depth2">
+                                        <li><a href="#n"><span>공지사항</span></a></li>
+                                        <li><a href="#n"><span>F&Q</span></a></li>
+                                        <li><a href="#n"><span>대관문의</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>브랜드</span></a>
+                                    <ul class="footer_depth2">
+                                        <li><a href="#n"><span>브랜드소개</span></a></li>
+                                        <li><a href="#n"><span>씨네큐 특징</span></a></li>
+                                        <li><a href="#n"><span>공간컨셉</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>프로그램</span></a>
+                                    <ul class="footer_depth2">
+                                        <li><a href="#n"><span>이벤트</span></a></li>
+                                        <li><a href="#n"><span>기획전</span></a></li>
+                                        <li><a href="#n"><span>프로모션</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bot">
+                    <div class="bot_t">
+                        <div class="txt">
+                            <a href="#n" class="imp" target="_blank" title="새창열림"><span>개인정보처리방침</span></a>
+                            <a href="#n" target="_blank" title="새창열림"><span>이용약관</span></a>
+                        </div>
+                        <a href="#n" class="theater" target="_blank" title="새창열림"><span>극장 찾기</span></a>
+                    </div>
+                    <div class="bot_b">
+                        <div class="sns">
+                            <a href="#n" target="_blank" title="새창열림" class="insta">
+                                <span class="sr-only">인스타</span>
+                            </a>
+                            <a href="#n" target="_blank" title="새창열림" class="face">
+                                <span class="sr-only">페이스북</span>
+                            </a>
+                            <a href="#n" target="_blank" title="새창열림" class="youtube">
+                                <span class="sr-only">유튜브</span>
+                            </a>
+                            <a href="#n" target="_blank" title="새창열림" class="x">
+                                <span class="sr-only">X</span>
+                            </a>
+                        </div>
+                        <div class="copyright">ⓒ CINE Q. All rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

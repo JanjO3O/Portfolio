@@ -1,0 +1,105 @@
+body{
+    font-family: "CloudSans", sans-serif;
+    font-weight: var(--font-weight-R);
+    font-size: var(--font-size-default);
+    line-height: var(--line-height-default);
+    word-break: keep-all;
+    word-wrap: break-word;
+    background-color: var(--color-B);
+    color: var(--color-white);
+}
+.wrapper{
+    width: var(--wrapper-width);
+    margin: 0 auto;
+}
+#wrap{
+    position: relative;
+}
+@media screen and (max-width:1360px){  /* 1260 + 50 + 50 */
+    .wrapper{
+        width: auto;
+        margin: 0 var(--wrapper-margin);
+    }
+}
+.sr-only, .skip, .blind {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+:root{
+    --font-family-Paperozi: "Paperozi";
+    --font-family-pretendard: "pretendard";
+    --wrapper-width: 1284px;
+    --wrapper-margin: 50px;
+    --font-size-L: 60px;
+    --font-size-tit: 40px;
+    --font-size-default: 16px;
+    --font-size-sub1: 24px;
+    --font-size-sub2: 20px;
+    --font-weight-R: 400;
+    --font-weight-B: 700;
+    --line-height-tit: 1.3;
+    --line-height-default: 1.5;
+    --color-B: #000;
+    --color-3d: #3d3d3d;
+    --color-f6: #f6f6f6;
+    --background-color: #141426;
+    --color-gray: #ccc;
+    --color-white: #fff;
+    --color-red1: #E60012;
+    --color-red2: #FB233B;
+    --color-all: #229C56;
+    --color-12: #E9B630;
+    --color-15: #DD7430;
+    --color-19: #D92B35;
+    --gap: 24px;
+    --header_banner-h: 50px;
+    --header_mid-h: 105px;
+    --header_bot-h: 60px;
+    --header_wrap-h: 215px;
+
+    --header_visible-h: calc(var(--header_banner-h) + var(--header_mid-h));
+}
+@media screen and (max-width:1150px){
+    :root{
+        --header_banner-h: 40px;
+        --header_wrap-h: 205px;
+    }
+}
+@media screen and (max-width:1024px){
+    :root{
+        --header-h: 72px;
+        --font-size-L: 45px;
+        --font-size-tit: 32px;
+        --font-size-sub1: 22px;
+        --font-size-sub2: 18px;
+        --header_mid-h: 80px;
+        --header_bot-h: 45px;
+        --header_wrap-h: 165px;
+    }
+}
+@media screen and (max-width:768px){
+    :root{
+        --header-h: 56px;
+        --wrapper-margin: 16px;
+        --font-size-L: 30px;
+        --font-size-tit: 28px;
+        --font-size-default: 15px;
+        --font-size-sub1: 20px;
+        --font-size-sub2: 16px;
+        --gap: 12px;
+        --header_wrap-h: 56px;
+    }
+}
+::selection{
+    background-color: var(--background-color-I);
+    color: var(--font-color);
+}

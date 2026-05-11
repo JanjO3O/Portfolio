@@ -1,0 +1,60 @@
+h1,h2,h3,h4,h5,h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style: none;
+}
+strong,th{
+    font-weight: inherit;
+}
+em,address{
+    font-style: normal;
+}
+button{
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    cursor: pointer; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input,select,textarea{
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+    -webkit-text-fill-color: #000;
+    transition: background-color 5000s ease-in-out 0s;
+}
+fieldset{
+    border: 0;
+}
+legend{
+    display: none;
+}
+caption{
+    display: none;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;  /* 칸과 칸을 병합 (bordeer의 겹침 병합) */
+}

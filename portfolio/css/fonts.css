@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'A2z';
+    src: url('../fonts/에이투지체-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'A2z';
+    src: url('../fonts/에이투지체-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'A2z';
+    src: url('../fonts/에이투지체-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CloudSans';
+    src: url('../fonts/goorm-sans-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CloudSans';
+    src: url('../fonts/goorm-sans-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('../fonts/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('../fonts/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+	font-family: "pretendard";
+	font-weight: 800;
+	font-display: swap;
+	src: local("Pretendard ExtraBold"), 
+    url(../fonts/Pretendard-Black.woff2) format("woff2"), 
+    url(../fonts/Pretendard-Black.woff) format("woff");
+}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@font-face {
+    font-family: 'Paperozi';
+    src: url('../fonts/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('../fonts/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('../fonts/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+	font-family: "pretendard";
+	font-weight: 800;
+	font-display: swap;
+	src: local("Pretendard ExtraBold"), 
+    url(../fonts/Pretendard-Black.woff2) format("woff2"), 
+    url(../fonts/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+	font-family: "pretendard";
+	font-weight: 700;
+	font-display: swap;
+	src: local("Pretendard Bold"), 
+    url(../fonts/Pretendard-Bold.woff2) format("woff2"), 
+    url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+	font-family: "pretendard";
+	font-weight: 400;
+	font-display: swap;
+	src: local("Pretendard Regular"), 
+    url(../fonts/Pretendard-Regular.woff2) format("woff2"), 
+    url(../fonts/Pretendard-Regular.woff) format("woff");
+}

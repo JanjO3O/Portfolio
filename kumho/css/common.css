@@ -1,0 +1,94 @@
+body{
+    font-family: "A2z", sans-serif;
+    font-weight: var(--font-weight-R);
+    font-size: var(--font-size-default);
+    color: var(--font-color);
+    line-height: var(--line-height-default);
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.wrapper{
+    width: var(--wrapper-width);
+    margin: 0 auto;
+}
+#wrap{
+    position: relative;
+}
+@media screen and (max-width:1320px){  /* 1260 + 30 + 30 */
+    .wrapper{
+        width: auto;
+        margin: 0 var(--wrapper-margin);
+    }
+}
+.sr-only, .skip, .blind {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+:root{
+    --header-h: 90px;
+    --wrapper-width: 1260px;
+    --wrapper-margin: 30px;
+    --font-size-tit: 40px;
+    --font-size-default: 16px;
+    --font-size-sub1: 32px;
+    --font-size-sub2: 28px;
+    --font-size-sub3: 24px;
+    --font-size-sub4: 22px;
+    --font-size-sub5: 20px;
+    --font-size-sub6: 18px;
+    --font-weight-R: 400;
+    --font-weight-M: 500;
+    --font-weight-B: 700;
+    --line-height-tit: 1.3;
+    --line-height-default: 1.5;
+    --font-color: #1d1d1d;
+    --font-color-3d: #3d3d3d;
+    --background-color-I: #FFFBEF;
+    --color-gray: #ccc;
+    --color-white: #fff;
+    --color-yellow: #FFE0AC;
+    --color-555: #555;
+    --gap: 24px;
+    
+}
+@media screen and (max-width:1024px){
+    :root{
+        --header-h: 72px;
+        --font-size-tit: 32px;
+        --font-size-default: 16px;
+        --font-size-sub1: 28px;
+        --font-size-sub2: 24px;
+        --font-size-sub3: 22px;
+        --font-size-sub4: 20px;
+        --font-size-sub5: 18px;
+        --font-size-sub6: 16px;
+    }
+}
+@media screen and (max-width:768px){
+    :root{
+        --header-h: 56px;
+        --wrapper-margin: 16px;
+        --font-size-tit: 28px;
+        --font-size-default: 15px;
+        --font-size-sub1: 24px;
+        --font-size-sub2: 22px;
+        --font-size-sub3: 20px;
+        --font-size-sub4: 18px;
+        --font-size-sub5: 16px;
+        --font-size-sub6: 16px;
+        --gap: 12px;
+    }
+}
+::selection{
+    background-color: var(--background-color-I);
+    color: var(--font-color);
+}
