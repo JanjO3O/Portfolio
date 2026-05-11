@@ -28,13 +28,13 @@
     font-weight: var(--font-weight-B);
     line-height: var(--line-height-tit);
 }
-.header .nav ul{
+.header .gnb ul{
     display: flex;
 }
-.header .nav ul li{
+.header .gnb ul li{
     position: relative;
 }
-.header .nav ul li::before{
+.header .gnb ul li::before{
     content: "";
     position: absolute;
     left: 0;
@@ -44,10 +44,10 @@
     height: 16px;
     background-color: rgba(29, 29, 29, 0.4);
 }
-.header .nav ul li:first-child::before{
+.header .gnb ul li:first-child::before{
     display: none;
 }
-.header .nav ul li a{
+.header .gnb ul li a{
     display: block;
     font-family: var(--font-family-pretendard);
     font-size: 26px;
@@ -56,14 +56,14 @@
     padding: 0 27px;
     transition: 0.3s;
 }
-.header .nav ul li a.active,
-.header .nav ul li a:hover{
+.header .gnb ul li a.active,
+.header .gnb ul li a:hover{
     color: #F5ECE6;
 }
-.header .nav ul li a span{
+.header .gnb ul li a span{
     position: relative;
 }
-.header .nav ul li a span::after{
+.header .gnb ul li a span::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -78,8 +78,8 @@
     opacity: 0;
     transition: 0.3s;
 }
-.header .nav ul li a.active span::after,
-.header .nav ul li a:hover span::after{
+.header .gnb ul li a.active span::after,
+.header .gnb ul li a:hover span::after{
     opacity: 1;
 }
 
@@ -104,7 +104,7 @@
 
 
 .about_me .list_wrap{
-    padding: 141px 118px;
+    padding: 141px 118px 141px 145px;
     display: flex;
     align-items: center;
 }

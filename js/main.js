@@ -1,5 +1,37 @@
 $(document).ready(function(){
 
+    let gnbMenu = $('.header .gnb ul li a');
+    let sectionName = ['.visual', '.about_me', '.works_list', '.footer'];
+
+    gnbMenu.on('click', function(e){
+        e.preventDefault();
+
+        let target = $(this).attr('href');
+        let targetTop = $(target).offset().top;
+
+        gnbMenu.removeClass('active');
+        $(this).addClass('active');
+
+        gsap.to(window, {
+            scrollTo: targetTop,
+            duration: 0.8,
+            ease: 'power2.out'
+        });
+    });
+
+$(window).on('scroll', function(){
+    let scrolling = $(window).scrollTop();
+
+    sectionName.forEach(function(item, index){
+        let sectionTop = $(item).offset().top - 100;
+        let sectionBottom = sectionTop + $(item).outerHeight();
+
+        if(scrolling >= sectionTop && scrolling < sectionBottom){
+            gnbMenu.removeClass('active');
+            gnbMenu.eq(index).addClass('active');
+        }
+    });
+});
     
 
     const SWIPE_THRESHOLD = 30;

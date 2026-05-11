@@ -10,26 +10,26 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>PORTFOLIO</title>
+    <title>이진주 PORTFOLIO</title>
 </head>
 <body>
     <div id="wrap">
         <header class="header">
             <div class="tit"><h1><a href="index.html" target="_self" title="홈으로"><span>PORTFOLIO</span></a></h1></div>
-            <gnb class="nav">
+            <nav class="gnb">
                 <ul>
-                    <li><a href="#n"><span>MAIN</span></a></li>
-                    <li><a href="#n"><span>ABOUT</span></a></li>
-                    <li><a href="#n"><span>WORKS</span></a></li>
-                    <li><a href="#n"><span>CONTACT</span></a></li>
+                    <li><a href="#visual"><span>MAIN</span></a></li>
+                    <li><a href="#about_me"><span>ABOUT</span></a></li>
+                    <li><a href="#works_list"><span>WORKS</span></a></li>
+                    <li><a href="#footer"><span>CONTACT</span></a></li>
                 </ul>
-            </gnb>
+            </nav>
         </header>
         <main class="container">
-            <section class="visual full_area">
+            <section id="visual" class="visual full_area">
                 <div class="photo"><img src="images/main/visual.jpg" alt="포트폴리오 표지"></div>
             </section>
-            <section class="about_me full_area">
+            <section id="about_me" class="about_me full_area">
                 <div class="list_wrap">
                     <div class="list_left">
                         <div class="photo"><img src="images/main/about02.jpg" alt="증명사진"></div>
@@ -120,16 +120,16 @@
                     </div>
                 </div>
             </section>
-            <section class="works_list full_area">
+            <section id="works_list" class="works_list full_area">
                 <ul>
                     <li class="works01">
                         <div class="inner">
                             <h2>Project 01</h2>
-                            <a href="#n" target="_self" title="포트폴리오 보러가기"><div class="photo"><img src="images/main/Project_bg.jpg" alt="미술관 사진"></div></a>
+                            <a href="content/Project01.html" target="_self" title="포트폴리오 보러가기"><div class="photo"><img src="images/main/Project_bg.jpg" alt="미술관 사진"></div></a>
                             <div class="box">
                                 <h3>
                                     <span>Kumho<br>Museum of Art</span>
-                                    <a href="#n" target="_self" title="포트폴리오 보러가기" class="view"><span class="sr-only">보러가기</span></a>
+                                    <a href="content/Project01.html" target="_self" title="포트폴리오 보러가기" class="view"><span class="sr-only">보러가기</span></a>
                                 </h3>
                                 <ul>
                                     <li>
@@ -153,9 +153,9 @@
                             <div class="text">
                                 <h2>Project 02</h2>
                                 <strong>CineQ Movie Theater</strong>
-                                <a href="#n" target="_self" title="포트폴리오 보러가기"><span>View Portfolio</span></a>
+                                <a href="content/Project02.html" target="_self" title="포트폴리오 보러가기"><span>View Portfolio</span></a>
                             </div>
-                            <a href="#n" target="_self" title="포트폴리오 보러가기"><div class="photo"><img src="images/main/Project 02.jpg" alt="나뭇가지에 앉아있는 소년소녀"></div></a>
+                            <a href="content/Project02.html" target="_self" title="포트폴리오 보러가기"><div class="photo"><img src="images/main/Project 02.jpg" alt="나뭇가지에 앉아있는 소년소녀"></div></a>
                             <div class="box">
                                 <ul>
                                     <li>
@@ -195,19 +195,19 @@
                                         <span>약 9일</span>
                                     </li>
                                 </ul>
-                                <a href="#n" target="_self" title="포트폴리오 보러가기" class="device">
+                                <a href="content/Project03.html" target="_self" title="포트폴리오 보러가기" class="device">
                                     <div class="photo pc"><img src="images/main/Project 03_pc.png" alt="농협사료 사이트 노트북 화면"></div>
                                     <div class="photo mo"><img src="images/main/Project 03_mo.png" alt="농협사료 사이트 핸드폰 화면"></div>
                                 </a>
                             </div>
-                            <a href="#n" target="_self" title="포트폴리오 보러가기"><div class="photo"><img src="images/main/Project 03.jpg" alt="논과 나무"></div></a>
-                            <a href="#n" target="_self" title="포트폴리오 보러가기" class="more"><span class="sr-only">보러가기</span></a>
+                            <a href="content/Project03.html" target="_self" title="포트폴리오 보러가기"><div class="photo"><img src="images/main/Project 03.jpg" alt="논과 나무"></div></a>
+                            <a href="content/Project03.html" target="_self" title="포트폴리오 보러가기" class="more"><span class="sr-only">보러가기</span></a>
                         </div>
                     </li>
                 </ul>
             </section>
         </main>
-        <footer class="footer full_area">
+        <footer id="footer" class="footer full_area">
             <div class="photo"><img src="images/main/footer.jpg" alt="감사합니다"></div>
         </footer>
     </div>
