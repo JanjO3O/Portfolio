@@ -1,0 +1,8 @@
+/* sub 페이지에서 호출하는 css
+   sub페이지의 공통 스타일이 들어감 */
+@import url(fonts.css);
+@import url(default.css);
+@import url(common.css);
+@import url(content.css);
+
+

@@ -1,39 +1,5 @@
 $(document).ready(function(){
 
-    let gnbMenu = $('.header .gnb ul li a');
-    let sectionName = ['.visual', '.about_me', '.works_list', '.footer'];
-
-    gnbMenu.on('click', function(e){
-        e.preventDefault();
-
-        let target = $(this).attr('href');
-        let targetTop = $(target).offset().top;
-
-        gnbMenu.removeClass('active');
-        $(this).addClass('active');
-
-        gsap.to(window, {
-            scrollTo: targetTop,
-            duration: 0.8,
-            ease: 'power2.out'
-        });
-    });
-
-$(window).on('scroll', function(){
-    let scrolling = $(window).scrollTop();
-
-    sectionName.forEach(function(item, index){
-        let sectionTop = $(item).offset().top - 100;
-        let sectionBottom = sectionTop + $(item).outerHeight();
-
-        if(scrolling >= sectionTop && scrolling < sectionBottom){
-            gnbMenu.removeClass('active');
-            gnbMenu.eq(index).addClass('active');
-        }
-    });
-});
-    
-
     const SWIPE_THRESHOLD = 30;
     const mainSections = Array.from(document.querySelectorAll('.full_area')); //fullapge로 구성할 영역의 이름
     const lastSection = mainSections[mainSections.length - 1];
@@ -272,27 +238,79 @@ $(window).on('scroll', function(){
 
 
 
-    
-    // let pageWrapper = document.querySelector(".works_list");/* 홈페이지 콘텐츠 전체를 감싸는 요소, 만약 .list로 준다면 화면에 list만 꽉차게됨. */
-    // let items = document.querySelector(".works_list ul");/* flex를 준 요소 */
-    // let localItems = gsap.utils.toArray(".works_list ul li");/* 좌우로 배치될 각각의 요소 */
-    // let mm = gsap.matchMedia();
-    // let distance = () => {
-    //     let lastItemBounds = localItems[localItems.length-1].getBoundingClientRect(),
-    //         containerBounds = items.getBoundingClientRect();
-    //     return Math.max(0, lastItemBounds.right - containerBounds.right);
-    // };
-    // gsap.to(items, {
-    //     x: () => -distance(),
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: ".works_list",
-    //         start: "top top",
-    //         end: () => "+=" + distance(),
-    //         scrub: 1,
-    //         pin: true,
-    //         invalidateOnRefresh: true
-    //     }
-    // });
+    $(function(){
+
+        let secNav = $('.sec_nav')
+        let navLi = $('.sec_nav > ul > li')
+        let navA = $('.sec_nav > ul > li > a')
+
+        secNav.hide()
+
+        function navChk(){
+            let scrollTop = $(window).scrollTop()
+            let winH = $(window).height()
+
+            if(scrollTop >= $('#about_me').offset().top - winH / 2){
+                secNav.show()
+            }else{
+                secNav.hide()
+            }
+
+            navLi.removeClass('active')
+
+            if(scrollTop >= $('#footer').offset().top - winH / 2){
+                navLi.eq(3).addClass('active')
+            }else if(scrollTop >= $('#works_list').offset().top - winH / 2){
+                navLi.eq(2).addClass('active')
+            }else if(scrollTop >= $('#about_me').offset().top - winH / 2){
+                navLi.eq(1).addClass('active')
+            }else{
+                navLi.eq(0).addClass('active')
+            }
+        }
+
+        navChk()
+
+        $(window).on('scroll resize', function(){
+            navChk()
+        })
+
+        navA.on('click', function(e){
+            e.preventDefault()
+
+            let href = $(this).attr('href')
+            let moveTop = 0
+
+            if(href === '#visual'){
+                moveTop = $('#visual').offset().top
+            }else if(href === '#about_me'){
+                moveTop = $('#about_me').offset().top
+            }else if(href === '#works_list'){
+                moveTop = $('#works_list').offset().top
+
+                // Works 클릭 시 무조건 첫 번째 프로젝트로 초기화
+                worksIndex = 0
+                worksMoving = false
+
+                gsap.set(worksUl, {
+                    x: 0
+                })
+            }else if(href === '#footer'){
+                moveTop = $('#footer').offset().top
+            }
+
+            gsap.to(window, {
+                scrollTo: moveTop,
+                duration: 0.5,
+                ease: 'power2.out',
+                onComplete: function(){
+                    navChk()
+                }
+            })
+        })
+
+    })
+
+
 
 })
