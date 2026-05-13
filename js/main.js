@@ -312,5 +312,20 @@ $(document).ready(function(){
     })
 
 
+    $(window).on('pointermove mousemove touchmove', function(e){  /* html cursor가 마우스 포인터를 따라다니게 하는 값 */
+        $('.cursor').css('left', e.pageX + 'px');
+        $('.cursor').css('top', e.pageY + 'px');
+    });
+    $('.works01 a:not(.view)').hover(function(){ /* 특정한 요소에 마우스를 올렸을때만 on 클래스 주기 */
+        $('.cursor').toggleClass('on works01');
+    });
+    $('.works02 .inner > a').hover(function(){ /* 특정한 요소에 마우스를 올렸을때만 on 클래스 주기 */
+        $('.cursor').toggleClass('on works02');
+    });
+    $('.works03 .inner .list .device, .works03 .inner > a:not(.more)').hover(function(){ /* 특정한 요소에 마우스를 올렸을때만 on 클래스 주기 */
+        $('.cursor').toggleClass('on works03');
+    });
+
+
 
 })

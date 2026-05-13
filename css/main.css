@@ -181,6 +181,7 @@
     display: block;
     width: 53.96%;
     height: 755px;
+    cursor: none !important;
 }
 .works01 a .photo{
     overflow: hidden;
@@ -309,6 +310,7 @@
     border-radius: 60px;
     padding: 13px 60px;
     text-align: center;
+    cursor: pointer !important;
 }
 .works02 .inner .text a:hover{
     background-color: #1d1d1d;
@@ -319,6 +321,7 @@
     display: block;
     width: 36.47%;
     height: 750px;
+    cursor: none !important;
 }
 .works02 .inner a .photo{
     overflow: hidden;
@@ -445,6 +448,7 @@
     top: calc(50% - 166.5px);
     width: 51.58%;
     height: 333px;
+    cursor: none !important;
 }
 .works03 .inner .list .device:hover{
     animation: device 3s linear infinite;
@@ -483,6 +487,7 @@
     top: 0;
     width: 39.58%;
     height: 100%;
+    cursor: none !important;
 }
 .works03 .inner > a > .photo{
     overflow: hidden;
@@ -513,6 +518,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 52px;
+    cursor: pointer !important;
 }
 .works03 .inner .more:hover{
     background-color: #fff;
@@ -593,4 +599,46 @@
 .sec_nav ul li.active a span{
     background-color: #A28676;
     border-radius: 5px;
+}
+
+
+
+.cursor{
+    position: absolute;  /* 반드시 absolute여야 하고 위치는 jquery에서 적용 시킴 */
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d1d1d;
+    text-align: center;
+    pointer-events: none;  /* 생성된 cursor에 마우스 오버 이벤트를 주지 않기 - 이걸 주지 않으면 cursor에 마우스가 오버된 것으로 인식되어 하단 요소가 클릭되지 않음 */
+}
+.cursor.on{
+	display: block;  /* jquery에서 특정 요소에 마우스를 오버하면 class명을 추가해주고 그때 나타남 */
+}
+.cursor.works01{
+    display: block;
+    font-size: 26px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background-color: #FFFBEF;
+}
+.cursor.works02{
+    display: block;
+    width: 120px;
+    height: 120px !important;
+    padding: 0 !important;
+    line-height: 120px;
+    background-color: #F1EAE2;
+}
+.cursor.works03{
+    display: block;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    color: #fff;
+    background-color: #A68446;
 }
