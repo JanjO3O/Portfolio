@@ -1,3 +1,88 @@
 /* 각각의 콘텐츠 페이지 스타일 
    - 여기 있는 css를 수정하면 해당 페이지 1개만 영향이 있음 
    대신에 선택자를 페이지에 제한되게 cnt_페이지명으로 시작해야 함 */
+
+
+
+.visual.bg1{
+   background-color: #FFFBEF;
+   color: #1d1d1d;
+}
+.visual.bg2{
+   background-color: #000;
+   color: #fff;
+}
+.visual.bg3{
+   background-color: #43564A;
+   color: #fff;
+}
+.visual .inner{
+   display: flex;
+   justify-content: space-between;
+   padding: 200px 0 200px 138px;
+}
+.visual .inner a{
+   display: block;
+   width: 48.20%;
+   height: 549px;
+   position: relative;
+   cursor: none !important;
+}
+.visual .inner a .photo{
+   overflow: hidden;
+}
+.visual .inner a .photo.pc{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 788px;
+}
+.visual .inner a .photo.mo{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   width: 167px;
+}
+.visual .inner a .photo img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   vertical-align: top;
+}
+
+
+
+.visual .inner .explain{
+   
+}
+
+
+
+.cursor{
+   position: absolute;
+   transform: translate(-50%, -50%);
+   z-index: 1000;
+   border-radius: 50%;
+   font-size: 26px;
+   text-align: center;
+   width: 150px;
+   height: 150px;
+   line-height: 150px;
+   pointer-events: none;
+   display: none;
+}
+.cursor.on{
+   display: block;
+}
+.cursor.kumho{
+   color: #1d1d1d;
+   background-color: #F1DEC0;
+}
+.cursor.cineq{
+   color: #1d1d1d;
+   background-color: #fff;
+}
+.cursor.nonghyup{
+   color: #43564A;
+   background-color: #F5F1E2;
+}

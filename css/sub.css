@@ -13,6 +13,11 @@ body{
 
 
 .header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,6 +31,10 @@ body{
     padding-left: 34px;
     position: relative;
 }
+.header .home.cineq a,
+.header .home.nonghyup a{
+    color: #fff;
+}
 .header .home a::before{
     content: "";
     position: absolute;
@@ -37,6 +46,17 @@ body{
     background-image: url("data:image/svg+xml,%3Csvg width='22' height='23' viewBox='0 0 22 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.2 20.9579H7.10783V12.868H14.8922V20.9579H19.8V8.7052L11 2.55264L2.2 8.7052V20.9579ZM0 23V7.68414L11 0L22 7.68414V23H12.6922V14.9102H9.30783V23H0Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center center;
+}
+.header .home.cineq a::before,
+.header .home.nonghyup a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='23' viewBox='0 0 22 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.2 20.9579H7.10783V12.868H14.8922V20.9579H19.8V8.7052L11 2.55264L2.2 8.7052V20.9579ZM0 23V7.68414L11 0L22 7.68414V23H12.6922V14.9102H9.30783V23H0Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+}
+.header .gnb.kumho{
+    color: #1d1d1d;
+}
+.header .gnb.cineq,
+.header .gnb.nonghyup{
+    color: #fff;
 }
 .header .gnb ul{
     display: flex;
@@ -54,11 +74,20 @@ body{
     height: 15px;
     background-color: rgba(0, 0, 0, 0.4);
 }
+.header .gnb.cineq ul li:not(li:first-child)::before{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.header .gnb.nonghyup ul li:not(li:first-child)::before{
+    background-color: rgba(255, 255, 255, 0.4);
+}
 .header .gnb ul li a{
     display: block;
     padding: 0 39px;
     font-size: 30px;
     line-height: 90px;
+}
+.header .gnb ul li a:hover{
+    font-weight: 600;
 }
 .header .gnb ul li.active a{
     font-weight: 600;
@@ -67,13 +96,11 @@ body{
 .header .gnb ul li.active.kumho a:hover{
     color: #FFE0AC;
 }
-.header .gnb ul li.active.cineq a,
-.header .gnb ul li.cineq a:hover{
+.header .gnb ul li.active.cineq a{
     font-weight: 600;
     color: #E60012;
 }
-.header .gnb ul li.active.nonghyup a,
-.header .gnb ul li.nonghyup a:hover{
+.header .gnb ul li.active.nonghyup a{
     font-weight: 600;
     color: #F5F1E2;
 }
