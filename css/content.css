@@ -53,7 +53,77 @@
 
 
 .visual .inner .explain{
-   
+   line-height: var(--line-height-tit);
+   width: 45.06%;
+}
+.visual .inner .explain h2{
+   font-size: 50px;
+   font-weight: 500;
+   padding: 40px 0;
+   margin-bottom: 30px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.visual .inner .explain h2.cineq,
+.visual .inner .explain h2.nonghyup{
+   border-color: rgba(255, 255, 255, 0.5);
+}
+.visual .inner .explain > span{
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 20px;
+   margin-bottom: 72px;
+}
+.visual .inner .explain ul{
+   display: flex;
+   flex-direction: column;
+   gap: 12px 0;
+   margin-left: 12px;
+   font-size: 20px;
+   line-height: var(--line-height-tit);
+}
+.visual .inner .explain ul li{
+   display: flex;
+   gap: 0 6px;
+   align-items: center;
+   padding-left: 18px;
+   position: relative;
+}
+.visual .inner .explain ul li::before{
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 6px;
+   height: 6px;
+   background-color: rgba(29, 29, 29, 0.8);
+   border-radius: 50%;
+}
+.visual .inner .explain ul li.cineq::before,
+.visual .inner .explain ul li.nonghyup::before{
+   background-color: rgba(255, 255, 255, 0.8);
+}
+.visual .inner .explain ul li span{
+   margin-right: 6px;
+}
+.visual .inner .explain ul li .photo{
+   overflow: hidden;
+   width: 22px;
+   height: 22px;
+   border-radius: 5px;
+}
+.visual .inner .explain ul li .photo img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   vertical-align: top;
+}
+
+
+
+.design .inner{
+   display: flex;
+   justify-content: space-between;
 }
 
 
@@ -85,4 +155,9 @@
 .cursor.nonghyup{
    color: #43564A;
    background-color: #F5F1E2;
+}
+
+
+.fp-warning, .fp-watermark{
+   display: none;
 }
