@@ -19,6 +19,7 @@
 .visual .inner{
    display: flex;
    justify-content: space-between;
+   align-items: center;
    padding: 200px 0 200px 138px;
 }
 .visual .inner a{
@@ -124,6 +125,189 @@
 .design .inner{
    display: flex;
    justify-content: space-between;
+   align-items: center;
+}
+.design .inner .box01{
+   width: 26.05%;
+   position: relative;
+}
+.design .inner .box01 .photo{
+   width: 100%;
+   height: 600px;
+   overflow: hidden;
+}
+.design .inner .box01 .photo img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   vertical-align: top;
+   opacity: 0.4;
+}
+.design .inner .box01 h2{
+   position: absolute; /* box01 기준 정렬 */
+   right: -270px;
+   top: 66px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 70px;
+   line-height: var(--line-height-tit);
+}
+.design .inner .box02{
+   width: 45.36%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.design .inner .box02 .color01{
+   width: 100%;
+   height: 310px;
+}
+.design .inner .box02 .color01.kumho{
+   background-color: #FFFBEF;
+}
+.design .inner .box02 .color01.cineq{
+   background-color: #FB233B;
+}
+.design .inner .box02 .color01.nonghyup{
+   background-color: #F5F1E2;
+}
+
+.design .inner .box02 .text{
+   display: flex;
+   flex-direction: column;
+   gap: 110px 0;
+   margin-left: 80px;
+}
+.design .inner .box02 .text > ul{
+   display: flex;
+   gap: 0 150px;
+}
+.design .inner .box02 .text > ul.nonghyup{
+   gap: 0 60px;
+}
+.design .inner .box02 .text ul li{
+   display: flex;
+   flex-direction: column;
+   gap: 30px 0;
+}
+.design .inner .box02 .text ul li strong{
+   font-size: 30px;
+   font-weight: 500;
+   line-height: var(--line-height-tit);
+}
+.design .inner .box02 .text ul li .color_list{
+   display: flex;
+   gap: 0 35px;
+}
+.design .inner .box02 .text ul li .color_list li{
+   width: 50px;
+   height: 50px;
+   border-radius: 10px;
+}
+.design .inner .box02 .text ul li .color_list.kumho li{
+   background-color: #FFFBEF;
+}
+.design .inner .box02 .text ul li .color_list.kumho li:nth-child(2){
+   background-color: #F1DEC0;
+}
+.design .inner .box02 .text ul li .color_list.kumho li:nth-child(3){
+   background-color: #FFE0AC;
+}
+.design .inner .box02 .text ul li .color_list.kumho li:nth-child(4){
+   background-color: #ccc;
+}
+.design .inner .box02 .text ul li .color_list.kumho li:last-child{
+   background-color: #1d1d1d;
+}
+
+.design .inner .box02 .text ul li .color_list.cineq li{
+   background-color: #E60012;
+}
+.design .inner .box02 .text ul li .color_list.cineq li:nth-child(2){
+   background-color: #FB233B;
+}
+.design .inner .box02 .text ul li .color_list.cineq li:nth-child(3){
+   background-color: #141426;
+}
+.design .inner .box02 .text ul li .color_list.cineq li:nth-child(4){
+   background-color: #ccc;
+}
+.design .inner .box02 .text ul li .color_list.cineq li:last-child{
+   background-color: #fff;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.design .inner .box02 .text ul li .color_list.nonghyup li{
+   background-color: #F5F1E2;
+}
+.design .inner .box02 .text ul li .color_list.nonghyup li:nth-child(2){
+   background-color: #FFE0AC;
+}
+.design .inner .box02 .text ul li .color_list.nonghyup li:nth-child(3){
+   background-color: #637C6C;
+}
+.design .inner .box02 .text ul li .color_list.nonghyup li:nth-child(4){
+   background-color: #43564A;
+}
+.design .inner .box02 .text ul li .color_list.nonghyup li:last-child{
+   background-color: #000;
+}
+
+.design .inner .box02 .text ul li.typography ul{
+   display: flex;
+   gap: 0 20px;
+}
+.design .inner .box02 .text ul li.typography ul li{
+   position: relative;
+}
+.design .inner .box02 .text ul li.typography ul li::after{
+   content: "";
+   position: absolute;
+   right: -10px;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 1px;
+   height: 13px;
+   background-color: rgba(61, 61, 61, 0.4);
+}
+.design .inner .box02 .text ul li.typography ul li:last-child::after{
+   display: none;
+}
+.design .inner .box02 .text ul li span{
+   font-size: 20px;
+   line-height: var(--line-height-tit);
+   color: #3d3d3d;
+}
+.design .inner .box02 .text ul li span.A2Z{
+   font-family: var(--font-family-A2z);
+}
+.design .inner .box02 .text ul li span.goorm{
+   font-family: var(--font-family-CloudSans);
+}
+.design .inner .box02 .text ul li.paperlogy{
+   font-size: 20px;
+   line-height: var(--line-height-tit);
+   color: #3d3d3d;
+}
+.design .inner .box02 .text ul li.garamond{
+   font-family: "Cormorant Garamond", serif;
+   font-size: 20px;
+   line-height: var(--line-height-tit);
+   color: #3d3d3d;
+}
+
+.design .inner .box02 .color02{
+   width: 100%;
+   height: 110px;
+}
+.design .inner .box02 .color02.kumho{
+   background-color: #FFE0AC;
+}
+.design .inner .box02 .color02.cineq{
+   background-color: #141426;
+}
+.design .inner .box02 .color02.nonghyup{
+   background-color: #43564A;
 }
 
 
