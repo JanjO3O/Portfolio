@@ -312,6 +312,144 @@
 
 
 
+.overview .inner{
+   height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   background-color: #FFFBEF;
+   padding: 92px 5.31% 0 5.31%;
+   position: relative; /* photo 정렬 기준 */
+}
+.overview .inner.cineq{
+   background-color: #141426;
+}
+.overview .inner.nonghyup{
+   background-color: #F5F1E2;
+}
+.overview .inner .text{
+   height: 261px;
+   margin-top: 60px;
+   position: relative;
+   z-index: 10;
+}
+.overview .inner .text.kumho{
+   width: 32.98%;
+}
+.overview .inner .text.cineq{
+   width:  32.46%;
+   color: #fff;
+}
+.overview .inner .text.nonghyup{
+   width: 34.27%;
+}
+.overview .inner .text h2{
+   font-family: "Cormorant Garamond", serif;
+   font-size: 70px;
+   line-height: var(--line-height-tit);
+}
+.overview .inner .text p{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   width: 526px;
+   padding-top: 12px;
+   word-break: normal;
+}
+.overview .inner .text.cineq p{
+   width: 517px;
+}
+.overview .inner .text.nonghyup p{
+   width: 548px;
+}
+.overview .inner .text p::before{
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 1px;
+   background-color: rgba(29, 29, 29, 0.7);
+}
+.overview .inner .text.cineq p::before{
+   background-color: rgba(255, 255, 255, 0.5);
+}
+.overview .inner .photo{
+   position: absolute; /* inner 기준 정렬*/
+   left: 26.67%;
+   bottom: 0;
+   width: 500px;
+   height: 808px;
+   overflow: hidden;
+}
+.overview .inner .photo::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.25);
+   backdrop-filter: blur(7px);
+}
+.overview .inner .photo.kumho::after{
+   background-color: rgba(255, 255, 255, 0.25);
+}
+.overview .inner .photo img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   vertical-align: top;
+}
+.overview .inner .box.kumho{
+   margin-top: 182px;
+   width: 41.78%;
+}
+.overview .inner .box.kumho ul{
+   display: flex;
+   flex-direction: column;
+   gap: 107px 0;
+}
+.overview .inner .box.kumho ul li{
+   height: 160px;
+   background-color: rgba(221, 204, 188, 0.3);
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.overview .inner .box.kumho ul li:last-child{
+   background-color: rgba(221, 204, 188, 0.9);
+}
+.overview .inner .box.kumho ul li strong{
+   position: absolute;
+   left: 24px;
+   top: -17px;
+   font-size: 26px;
+   font-weight: 500;
+   line-height: var(--line-height-tit);
+   color: #3d3d3d;
+}
+.overview .inner .box.kumho ul li:last-child strong{
+   font-weight: var(--font-weight-B);
+}
+.overview .inner .box.kumho ul li span{
+   font-size: 20px;
+   line-height: var(--line-height-tit);
+   color: #3d3d3d;
+}
+.overview .inner .box.kumho ul li:last-child span{
+   font-weight: 600;
+   color: #1d1d1d;
+}
+.overview .inner .box.nonghyup{
+   
+}
+
+
+
+
 .cursor{
    position: absolute;
    transform: translate(-50%, -50%);
