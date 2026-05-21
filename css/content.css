@@ -183,7 +183,7 @@
    gap: 0 150px;
 }
 .design .inner .box02 .text > ul.nonghyup{
-   gap: 0 60px;
+   gap: 0 100px;
 }
 .design .inner .box02 .text ul li{
    display: flex;
@@ -289,11 +289,18 @@
    line-height: var(--line-height-tit);
    color: #3d3d3d;
 }
+.design .inner .box02 .text ul li.paperlogy{
+   font-family: var(--font-family-Paperozi);
+   font-size: 17px;
+}
 .design .inner .box02 .text ul li.garamond{
    font-family: "Cormorant Garamond", serif;
-   font-size: 20px;
+   font-size: 17px;
    line-height: var(--line-height-tit);
    color: #3d3d3d;
+}
+.design .inner .box02 .text ul.nonghyup li span{
+   font-size: 17px;
 }
 
 .design .inner .box02 .color02{
@@ -325,6 +332,7 @@
    background-color: #141426;
 }
 .overview .inner.nonghyup{
+   padding: 92px 4.69% 0 4.69%;
    background-color: #F5F1E2;
 }
 .overview .inner .text{
@@ -341,7 +349,7 @@
    color: #fff;
 }
 .overview .inner .text.nonghyup{
-   width: 34.27%;
+   width: 33.80%;
 }
 .overview .inner .text h2{
    font-family: "Cormorant Garamond", serif;
@@ -378,6 +386,7 @@
    position: absolute; /* inner 기준 정렬*/
    left: 26.67%;
    bottom: 0;
+   z-index: 2;
    width: 500px;
    height: 808px;
    overflow: hidden;
@@ -443,10 +452,101 @@
    font-weight: 600;
    color: #1d1d1d;
 }
-.overview .inner .box.nonghyup{
-   
+.overview .inner .box.cineq{
+   position: absolute;
+   right: 0;
+   width: 52.60%;
+   height: 100%;
+   margin-top: 12px;
 }
-
+.overview .inner .box.cineq .circle{
+   position: absolute;
+   right: -27px;
+   top: 0;
+   width: 473px;
+   height: 473px;
+   background-color: #fff;
+   border-radius: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.overview .inner .box.cineq .circle.as{
+   padding: 0 72px 0 0;
+   text-align: right;
+}
+.overview .inner .box.cineq .circle.to{
+   right: auto;
+   top: auto;
+   bottom: 140px;
+   left: 30px;
+   z-index: 0;
+   padding: 0 0 0 113px;
+}
+.overview .inner .box.cineq .circle strong{
+   font-size: 24px;
+   font-weight: 500;
+   line-height: var(--line-height-tit);
+   margin-bottom: 1em;
+}
+.overview .inner .box.cineq .circle.to strong{
+   font-weight: var(--font-weight-B);
+}
+.overview .inner .box.cineq .circle span{
+   line-height: var(--line-height-tit);
+   padding-bottom: 1.41em;
+   position: relative;
+}
+.overview .inner .box.cineq .circle.to span{
+   font-weight: var(--font-weight-B);
+}
+.overview .inner .box.cineq .circle span::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 1px;
+   background-color: #141426;
+}
+.overview .inner .box.nonghyup{
+   width: 43.51%;
+   margin-top: 39px;
+}
+.overview .inner .box.nonghyup ul{
+   display: grid;
+   grid-template-columns: repeat(2, 348px);
+   grid-template-rows: repeat(2, 345px);
+   gap: 40px 63px;
+}
+.overview .inner .box.nonghyup ul li{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 20px;
+   background-color: rgba(221, 204, 188, 1);
+   text-align: center;
+   position: relative;
+}
+.overview .inner .box.nonghyup ul li:nth-child(2),
+.overview .inner .box.nonghyup ul li:nth-child(3){
+   background-color: rgba(221, 204, 188, 0.3);
+}
+.overview .inner .box.nonghyup ul li strong{
+   position: absolute;
+   left: 50%;
+   top: -26px;
+   transform: translateX(-50%);
+   font-size: 40px;
+   line-height: var(--line-height-tit);
+}
+.overview .inner .box.nonghyup ul li span{
+   font-size: 20px;
+   line-height: var(--line-height-tit);
+}
+.overview .inner .box.nonghyup ul li span > span.strong{
+   font-weight: var(--font-weight-B);
+}
 
 
 
