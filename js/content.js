@@ -9,18 +9,28 @@ $(document).ready(function(){
 		afterLoad: function(origin, destination, direction, trigger){
 
 		if(destination.index == 0){
-			$('body').removeClass('design_active');
+			$('body').removeClass('design_active')
+			$('body').removeClass('nonghyup_active')
+			$('.header .home.cineq a, .header .home.nonghyup a').removeClass('active')
+			$('.header .gnb.nonghyup ul li a').removeClass('active')
 			console.log('1번째')
 		}else if(destination.index == 1){
-			$('body').addClass('design_active');
+			$('body').addClass('design_active')
+			$('.header .home.cineq a, .header .home.nonghyup a').addClass('active')
+			$('.header .gnb.nonghyup ul li a').addClass('active')
 			console.log('2번째')
 		}else if(destination.index == 2){
 			$('body').removeClass('design_active')
-			$('body').addClass('nonghyup_active');
+			$('body').addClass('nonghyup_active')
+			$('.header .home.cineq a').removeClass('active')
+			$('.header .home.nonghyup a').addClass('active')
+			$('.header .gnb.nonghyup ul li a').addClass('active')
 			console.log('3번째')
 		}else if(destination.index == 3){
 			$('body').removeClass('nonghyup_active')
-			$('body').removeClass('design_active');
+			$('body').removeClass('design_active')
+			$('.header .home.cineq a, .header .home.nonghyup a').removeClass('active')
+			$('.header .gnb.nonghyup ul li a').removeClass('active')
 			console.log('4번째')
 		}
 	}
