@@ -100,6 +100,12 @@ body{
     font-weight: 600;
     color: #E60012;
 }
+body.design_active .header .gnb ul li.active.cineq a{
+    color: #141426;
+}
+body.design_active .header .gnb ul li.active.cineq a span::after{
+    background-color: #141426;
+}
 .header .gnb ul li.active.nonghyup a{
     font-weight: 600;
     color: #F5F1E2;
@@ -122,4 +128,12 @@ body{
 }
 .header .gnb ul li.active.nonghyup a span::after{
     background-color: #F5F1E2;
+}
+body.design_active .header .gnb ul li.active.nonghyup a,
+body.nonghyup_active .header .gnb ul li.active.nonghyup a{
+    color: #43564A;
+}
+body.design_active .header .gnb ul li.active.nonghyup a span::after,
+body.nonghyup_active .header .gnb ul li.active.nonghyup a span::after{
+    background-color: #43564A;
 }

@@ -7,16 +7,24 @@ $(document).ready(function(){
 		scrollOverflow: false, /* 컨텐츠가 넘쳐도 스크롤 금지 */
 
 		afterLoad: function(origin, destination, direction, trigger){
-			if(destination.index == 0){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
-				console.log('1번째')
-			}else if(destination.index == 1){
+
+		if(destination.index == 0){
+			$('body').removeClass('design_active');
+			console.log('1번째')
+		}else if(destination.index == 1){
+			$('body').addClass('design_active');
 			console.log('2번째')
-			}else if(destination.index == 2){
+		}else if(destination.index == 2){
+			$('body').removeClass('design_active')
+			$('body').addClass('nonghyup_active');
 			console.log('3번째')
-			}else if(destination.index == 3){
+		}else if(destination.index == 3){
+			$('body').removeClass('nonghyup_active')
+			$('body').removeClass('design_active');
 			console.log('4번째')
-			}
 		}
+	}
+		
 	});
 
 
@@ -28,5 +36,8 @@ $(document).ready(function(){
 	$('.visual .inner a').hover(function(){ /* 특정한 요소에 마우스를 올렸을때만 on 클래스 주기 */
 		$('.cursor').toggleClass('on');
 	});
+
+
+	
 
 })

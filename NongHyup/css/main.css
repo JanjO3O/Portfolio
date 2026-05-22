@@ -529,6 +529,7 @@ body::-webkit-scrollbar-track{
     transform: scale(1);
     will-change: transform, border;
     transition: all 0.5s;
+    cursor: pointer;
 }
 .product .list_wrap .list01 .beef_item:hover{
     border: 10px solid var(--bg-color-I2);
@@ -555,6 +556,7 @@ body::-webkit-scrollbar-track{
     transform: scale(1);
     will-change: transform, border;
     transition: all 0.5s;
+    cursor: pointer;
 }
 .product .list_wrap .list01 .list_box ul li:hover{
     border: 10px solid var(--bg-color-I2);
@@ -647,6 +649,7 @@ body::-webkit-scrollbar-track{
     transform: scale(1);
     will-change: transform, border;
     transition: all 0.5s;
+    cursor: pointer;
 }
 .product .list_wrap .list02 ul li:hover{
     border: 10px solid var(--bg-color-I2);
